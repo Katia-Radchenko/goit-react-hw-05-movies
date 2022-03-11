@@ -1,0 +1,11 @@
+.item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.item::marker {
+  font-size: 18px;
+}
+
+.link {
+  font-size: 18px;
+}
