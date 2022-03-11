@@ -1,7 +1,7 @@
 .button {
   padding: 8px 16px;
   border-radius: 2px;
-  background-color: #04139b;
+  background-color: #3498db;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: block;
@@ -22,5 +22,5 @@
 
 .button:hover,
 .button:focus {
-  background-color: #4755d3;
+  background-color: #3498db;
 }
