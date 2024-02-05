@@ -1,0 +1,25 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /*flex-wrap: wrap;*/
+  gap: 40px;
+  list-style: none;
+}
+.list li {
+  border: 1px solid #3498db;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.list img {
+  margin: 10px auto;
+}
+
+.photo {
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+}

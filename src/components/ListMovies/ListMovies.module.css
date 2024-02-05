@@ -1,0 +1,13 @@
+.item:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.item::marker {
+  font-size: 18px;
+}
+/* .item:hover {
+  color: #3498db;
+} */
+.link {
+  font-size: 18px;
+}
