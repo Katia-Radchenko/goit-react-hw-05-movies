@@ -25,8 +25,9 @@ const Reviews = () => {
   }, [param.movieId]);
 
 
-  return <> <>
+  return <>
     {reviews === null ? (
+      
       <Loader />
     ) : reviews.length === 0 ? (
       <p>...We don't have any reviews for this movie...</p>
@@ -34,7 +35,7 @@ const Reviews = () => {
       <ReviewsList reviews={reviews} />
     )}
   </>
-  </>;
+
 };
 
 export default Reviews;

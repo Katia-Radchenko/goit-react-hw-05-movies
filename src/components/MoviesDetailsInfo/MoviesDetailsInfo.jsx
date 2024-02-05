@@ -42,6 +42,7 @@ const MoviesDetailsInfo = () => {
 
   return (
     <>
+      {error && <p>{error}</p>}
       <button className={s.button} onClick={returnBack}>Go back</button>
       <div className={s.container}>
         {movies !== null ? (

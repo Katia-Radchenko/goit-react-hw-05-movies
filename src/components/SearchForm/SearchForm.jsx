@@ -48,6 +48,7 @@ const SearchForm = () => {
 
   return (
     <main>
+      {error && <p>{error}</p>}
       {loading && <Loader/>}
     <form className={s.form} onSubmit={handleSubmit}>
         <label></label>
