@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { getAllPosts } from '../../api/api-movies';
-// import { NavLink } from 'react-router-dom';
-// import { getAllPosts } from '../../api/api-movies';
 import ListMovies from '../../components/ListMovies/ListMovies';
 import { Loader } from '../../components/Loader/Loader';
 
@@ -30,10 +28,9 @@ const HomePage = () => {
   return (
     <div>
       <h1>Home page</h1>
-
+      {error && <p>{error}</p>}
       {loading && <Loader/>}
       <ListMovies movies={movies}  />
-      {/*<Posts />*/}
     </div>
   );
 };
