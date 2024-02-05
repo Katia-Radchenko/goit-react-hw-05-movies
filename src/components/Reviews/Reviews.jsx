@@ -26,15 +26,16 @@ const Reviews = () => {
 
 
   return <>
+    {error && <p>{error}</p>}
     {reviews === null ? (
-      
+
       <Loader />
     ) : reviews.length === 0 ? (
       <p>...We don't have any reviews for this movie...</p>
     ) : (
       <ReviewsList reviews={reviews} />
     )}
-  </>
+  </>;
 
 };
 

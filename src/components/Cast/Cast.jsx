@@ -27,7 +27,7 @@ const Cast = () => {
   }, [param.movieId]);
 
 
-  return <>{cast === null ? <Loader/> : <CastList cast={cast} />}</>;
+  return <>{error && <p>{error}</p>}{cast === null ? <Loader /> : <CastList cast={cast} />}</>;
 };
 
-export default Cast
+export default Cast;
