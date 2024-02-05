@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCast, getSearchById } from '../../api/api-movies';
+import { getCast } from '../../api/api-movies';
 import CastList from './CastList';
 import { Loader } from '../Loader/Loader';
 
@@ -18,9 +18,6 @@ const Cast = () => {
       } catch (error) {
         setError(error.message);
       }
-      // finally {
-      //   setLoading(false);
-      // }
     };
 
     fetchList();

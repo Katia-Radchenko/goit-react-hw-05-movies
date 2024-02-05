@@ -1,4 +1,4 @@
-import s from './ReviewsList.module.css'
+import s from './ReviewsList.module.css';
 
 
 const ReviewsList = ({ reviews }) => {
@@ -19,4 +19,4 @@ const ReviewsList = ({ reviews }) => {
   );
 };
 
-export default ReviewsList
+export default ReviewsList;

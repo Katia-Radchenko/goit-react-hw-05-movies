@@ -1,9 +1,9 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { MdOutlineSearch } from "react-icons/md";
+import { MdOutlineSearch } from 'react-icons/md';
 import { getSearchWord } from '../../api/api-movies';
 import ListMovies from '../ListMovies/ListMovies';
-import s from './SearchForm.module.css'
+import s from './SearchForm.module.css';
 import { Loader } from '../Loader/Loader';
 
 const SearchForm = () => {
@@ -37,8 +37,7 @@ const SearchForm = () => {
         setMovies(data.results);
       } catch (error) {
         setError(error.message);
-      }
-      finally {
+      } finally {
         setLoading(false);
       }
     };
@@ -49,13 +48,14 @@ const SearchForm = () => {
   return (
     <main>
       {error && <p>{error}</p>}
-      {loading && <Loader/>}
-    <form className={s.form} onSubmit={handleSubmit}>
+      {loading && <Loader />}
+      <form className={s.form} onSubmit={handleSubmit}>
         <label></label>
-        <input className={s.formInput} required type="text" name="search" placeholder="Enter search phrase" value={search}
+        <input className={s.formInput} required type="text" name="search" placeholder="Enter search phrase"
+               value={search}
                onChange={handleOnChange} />
-      <button className={s.formBtn}  type="submit"><MdOutlineSearch /></button>
-    </form>
+        <button className={s.formBtn} type="submit"><MdOutlineSearch /></button>
+      </form>
       {movies.length > 0 ? <ListMovies movies={movies} /> : ''}
     </main>
   );

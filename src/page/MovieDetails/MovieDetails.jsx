@@ -6,9 +6,9 @@ const MovieDetails = () => {
 
   return (
     <main>
- <MoviesDetailsInfo/>
+      <MoviesDetailsInfo />
     </main>
   );
 };
 
-export default MovieDetails
+export default MovieDetails;

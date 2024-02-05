@@ -68,7 +68,7 @@ const MoviesDetailsInfo = () => {
             </div>
           </>
         ) : (
-          <Loader/>
+          <Loader />
         )}
       </div>
       <AdditionalMovieInfo />

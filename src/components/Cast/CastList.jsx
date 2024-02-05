@@ -1,5 +1,6 @@
-import s from './Cast.module.css'
+import s from './Cast.module.css';
 import noImageFound from '../../img/no-image.jpg';
+
 const CastList = ({ cast }) => {
   return (
     <>
@@ -24,4 +25,4 @@ const CastList = ({ cast }) => {
   );
 };
 
-export default CastList
+export default CastList;
