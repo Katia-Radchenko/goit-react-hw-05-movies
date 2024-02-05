@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation, Outlet, Link } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import s from './MoviesDetailsInfo.module.css';
 import { getSearchById } from '../../api/api-movies';
 import AdditionalMovieInfo from '../AdditionalMovieInfo/AdditionalMovieInfo';
