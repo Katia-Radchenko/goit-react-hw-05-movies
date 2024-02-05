@@ -17,7 +17,6 @@ export const getAllPosts = () => {
       language: 'en-US',
     },
   });
-  // return data.results;
 };
 
 export const getSearchWord = (search) => {
@@ -61,17 +60,3 @@ export const getReviews= (id) => {
 
 
 
-
-
-// const options = {
-//   method: 'GET',
-//   headers: {
-//     accept: 'application/json',
-//     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NTdkOWMxMDk0Yjc4NDM2NzQyMmMyMWM4ZWYxY2ZkNyIsInN1YiI6IjYyMmI0NDU2YTU3OWY5MDA2ZjFkODdlZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N4TfXVz9yGcHwKklWeQ0SwZYEdTmBnPAQrHKEZjuBRE',
-//   },
-// };
-//
-// fetch('https://api.themoviedb.org/3/account/null', options)
-//   .then(response => response.json())
-//   .then(response => console.log(response))
-//   .catch(err => console.error(err));
