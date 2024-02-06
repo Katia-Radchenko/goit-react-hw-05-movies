@@ -1,55 +1,21 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import s from './MoviesDetailsInfo.module.css';
-import { getSearchById } from '../../api/api-movies';
 import AdditionalMovieInfo from '../AdditionalMovieInfo/AdditionalMovieInfo';
 import { Loader } from '../Loader/Loader';
+import noImageFound from '../../img/no-image.jpg';
 
-const MoviesDetailsInfo = () => {
-  const param = useParams();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [movies, setMovies] = useState(null);
-  const [error, setError] = useState(null);
-  const [fromLocation] = useState(() => {
-    return location;
-  });
-
-  useEffect(() => {
-
-    const fetchList = async () => {
-      try {
-        const { data } = await getSearchById(param.movieId);
-        setMovies(data);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-
-    fetchList();
-  }, [param.movieId]);
-
-  const returnBack = () => {
-    if (fromLocation.state !== null) {
-      const { pathname, search } = fromLocation.state.from;
-      navigate(pathname + search ?? '/');
-    } else {
-      navigate('/');
-    }
-  };
-
+const MoviesDetailsInfo = ({ movies, onClick }) => {
   const { title, poster_path, vote_average, overview, genres } = movies || {};
 
   return (
     <>
-      {error && <p>{error}</p>}
-      <button className={s.button} onClick={returnBack}>Go back</button>
+
+      <button className={s.button} onClick={onClick}>Go back</button>
       <div className={s.container}>
         {movies !== null ? (
           <>
             <div className={s.imgThumb}>
               <img
-                src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+                src={poster_path ? `https://image.tmdb.org/t/p/w300${poster_path}` : noImageFound}
                 alt={title}
               />
             </div>

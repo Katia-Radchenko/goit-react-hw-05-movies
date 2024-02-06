@@ -5,8 +5,8 @@ const CastList = ({ cast }) => {
   return (
     <>
       <ul className={s.list}>
-        {cast.map(actor => (
-          <li key={actor.id}>
+        {cast.map((actor, idx) => (
+          <li key={idx}>
             <span>Actor: {actor.name}</span>
             <img
               src={
